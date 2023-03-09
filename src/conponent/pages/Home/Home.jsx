@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "react-query";
+import "./Home.css";
 
 export default function Home() {
   const {
@@ -24,8 +25,9 @@ export default function Home() {
               src={video.snippet.thumbnails.medium.url}
               alt="썸네일"
             ></img>
-            <h5>{video.snippet.title}</h5>
-            <h6>{video.snippet.channelId}</h6>
+            <h4>{video.snippet.title}</h4>
+            <h6>{video.snippet.channelTitle}</h6>
+            <h6>{video.snippet.publishedAt}</h6>
           </div>
         );
       })}
