@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
 }
-.video_item_container {
+.homevideo_item_container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 80px;
   margin-left: 50px;
+  padding-top: 80px;
 }
 
-.video_item {
+.homevideo_item {
   width: 300px;
   margin: 20px;
 }

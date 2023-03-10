@@ -23,10 +23,10 @@ export default function Home() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="video_item_container">
+    <div className="homevideo_item_container">
       {hotVideo.items.map((video) => {
         return (
-          <div className="video_item">
+          <div className="homevideo_item">
             <Link>
               <img
                 className="hotvideoitem"

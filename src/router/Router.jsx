@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../conponent/layout/Header/Header";
 import Detail from "../conponent/pages/Detail/Detail";
 import Home from "../conponent/pages/Home/Home";
-import Reserch from "../conponent/pages/Reserch/Reserch";
+import Reserched from "../conponent/pages/Reserch/Reserched";
 
 export default function Router() {
   return (
@@ -13,7 +13,7 @@ export default function Router() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="detail" element={<Detail />} />
-          <Route path="reserch" element={<Reserch />} />
+          <Route path="reserched" element={<Reserched />} />
         </Routes>
       </BrowserRouter>
     </>

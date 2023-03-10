@@ -3,30 +3,50 @@
 }
 
 .header_container {
-  margin-top: 20px;
-  width: 1500px;
+  position: relative;
+  position: fixed;
+  width: 100%;
+  height: 10%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 .logo {
   width: 130px;
   height: 30px;
+  margin-right: 50px;
 }
 
 .header_form {
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-right: 80px;
+  margin-right: 200px;
 }
+
 .header_input {
-  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: white;
   width: 700px;
   height: 45px;
   margin-left: 140px;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.header_input::placeholder {
+  padding-left: 15px;
+  font-size: large;
+}
+
+.header_button {
+  border: 1px solid black;
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 80px;
+  border-left: none;
 }

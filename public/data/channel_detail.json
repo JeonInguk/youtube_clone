@@ -1,6 +1,6 @@
 {
   "kind": "youtube#channelListResponse",
-  "etag": "XWz2y8CmiajI3l95iq7MLK_yFCY",
+  "etag": "ZlWaAlOghdkZz6ShtAfF_Il8edw",
   "pageInfo": {
     "totalResults": 1,
     "resultsPerPage": 5
@@ -8,33 +8,34 @@
   "items": [
     {
       "kind": "youtube#channel",
-      "etag": "71fXfSvFIaj7Jn9nAdsucPT6u1c",
-      "id": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+      "etag": "iacZFHYmCarMhR8Tnv8fm8iPnyg",
+      "id": "UCz9yS18zJGQObwUL_K-ICnw",
       "snippet": {
-        "title": "Google Developers",
-        "description": "The Google Developers channel features talks from events, educational series, best practices, tips, and the latest updates across our products and platforms.\n\nSubscribe to Google Developers → https://goo.gle/developers\n",
-        "customUrl": "@googledevelopers",
-        "publishedAt": "2007-08-23T00:34:43Z",
+        "title": "KarolGVEVO",
+        "description": "",
+        "customUrl": "@karolgvevo",
+        "publishedAt": "2016-01-11T18:06:10Z",
         "thumbnails": {
           "default": {
-            "url": "https://yt3.ggpht.com/ytc/AL5GRJUFC8wq-fwjeJR5HoLNc31hurtQKbi1ayR2i8gFJK8=s88-c-k-c0x00ffffff-no-rj",
+            "url": "https://yt3.ggpht.com/Js_Ip-lezgP0XmjUzTLsHPUN9HVBn1vMeYnx12ApUPVfSPSIBiZ2OEAMlXM86USsGv38PsCnfQ=s88-c-k-c0x00ffffff-no-nd-rj",
             "width": 88,
             "height": 88
           },
           "medium": {
-            "url": "https://yt3.ggpht.com/ytc/AL5GRJUFC8wq-fwjeJR5HoLNc31hurtQKbi1ayR2i8gFJK8=s240-c-k-c0x00ffffff-no-rj",
+            "url": "https://yt3.ggpht.com/Js_Ip-lezgP0XmjUzTLsHPUN9HVBn1vMeYnx12ApUPVfSPSIBiZ2OEAMlXM86USsGv38PsCnfQ=s240-c-k-c0x00ffffff-no-nd-rj",
             "width": 240,
             "height": 240
           },
           "high": {
-            "url": "https://yt3.ggpht.com/ytc/AL5GRJUFC8wq-fwjeJR5HoLNc31hurtQKbi1ayR2i8gFJK8=s800-c-k-c0x00ffffff-no-rj",
+            "url": "https://yt3.ggpht.com/Js_Ip-lezgP0XmjUzTLsHPUN9HVBn1vMeYnx12ApUPVfSPSIBiZ2OEAMlXM86USsGv38PsCnfQ=s800-c-k-c0x00ffffff-no-nd-rj",
             "width": 800,
             "height": 800
           }
         },
+        "defaultLanguage": "en",
         "localized": {
-          "title": "Google Developers",
-          "description": "The Google Developers channel features talks from events, educational series, best practices, tips, and the latest updates across our products and platforms.\n\nSubscribe to Google Developers → https://goo.gle/developers\n"
+          "title": "KarolGVEVO",
+          "description": ""
         },
         "country": "US"
       }

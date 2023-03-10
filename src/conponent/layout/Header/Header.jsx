@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { HiMagnifyingGlass } from "react-icons/hi2";
 
 export default function Header() {
   const [typing, setTyping] = useState("");
@@ -14,11 +15,13 @@ export default function Header() {
           <input
             className="header_input"
             type="text"
-            placeholder="  검색"
+            placeholder="검색"
             value={typing}
             onChange={handleTyping}
           ></input>
-          <button>검색버튼</button>
+          <button className="header_button">
+            <HiMagnifyingGlass size="25" />
+          </button>
         </form>
       </span>
     </>

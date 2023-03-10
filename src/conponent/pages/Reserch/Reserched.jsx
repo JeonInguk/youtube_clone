@@ -1,17 +1,17 @@
 import React from "react";
 import { useQuery } from "react-query";
-import "./Detail.css";
+import "./Reserched.css";
 
-export default function Detail() {
+export default function Reserched() {
   const {
     isLoading,
     error,
-    data: clickedVideo,
+    data: reserchedVideo,
   } = useQuery(
-    ["clickedvideo"],
+    ["reserchedvideo"],
     async () => {
       console.log("fetching...");
-      return fetch(`data/channel_detail.json`).then((res) => res.json());
+      return fetch(`data/list_by_keyword.json`).then((res) => res.json());
     },
     {
       staleTime: 1000 * 60 * 5,
@@ -20,21 +20,20 @@ export default function Detail() {
   if (isLoading) return <p>Loading...</p>;
 
   if (error) return <p>{error}</p>;
-
   return (
     <div className="video_item_container">
-      {clickedVideo.items.map((video) => {
+      {reserchedVideo.items.map((video) => {
         return (
-          <div className="clickedvideo_item">
+          <div className="video_item">
             <img
-              className="clickedvideoimg"
-              src={video.snippet.thumbnails.high.url}
+              className="reserchvideoitem"
+              src={video.snippet.thumbnails.medium.url}
               alt="썸네일"
             ></img>
-            <div className="clicked_content">
-              <h1 className="title">{video.snippet.title}</h1>
+            <div className="reserched_content">
+              <h2 className="title">{video.snippet.title}</h2>
               <h4 className="channeltitle">{video.snippet.channelTitle}</h4>
-              <h4 className="description">{video.snippet.description}</h4>
+              <h6 className="publishedat">{video.snippet.publishedAt}</h6>
             </div>
           </div>
         );

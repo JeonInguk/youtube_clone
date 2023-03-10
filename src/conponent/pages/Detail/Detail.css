@@ -1,0 +1,18 @@
+.clickedvideo_item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 20px;
+  margin-left: 10px;
+}
+.clicked_content {
+  width: 900px;
+}
+.clickedvideoimg {
+  width: 900px;
+  height: 500px;
+}
+.description {
+  width: 400px;
+}
