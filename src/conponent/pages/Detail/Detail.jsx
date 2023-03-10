@@ -26,13 +26,14 @@ export default function Detail() {
       {clickedVideo.items.map((video) => {
         return (
           <div className="clickedvideo_item">
-            <img
-              className="clickedvideoimg"
-              src={video.snippet.thumbnails.high.url}
-              alt="썸네일"
-            ></img>
+            <iframe
+              className="videoframe"
+              src="https://www.youtube.com/embed/ocjkjPfv7MA"
+              // id.videoId
+              allowFullScreen
+            ></iframe>
             <div className="clicked_content">
-              <h1 className="title">{video.snippet.title}</h1>
+              <h2 className="title">{video.snippet.title}</h2>
               <h4 className="channeltitle">{video.snippet.channelTitle}</h4>
               <h4 className="description">{video.snippet.description}</h4>
             </div>
