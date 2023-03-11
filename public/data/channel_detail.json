@@ -1,6 +1,6 @@
 {
   "kind": "youtube#channelListResponse",
-  "etag": "ZlWaAlOghdkZz6ShtAfF_Il8edw",
+  "etag": "Jl0vlLJlfWKqRTbV2hgeT5JYqjE",
   "pageInfo": {
     "totalResults": 1,
     "resultsPerPage": 5
@@ -8,36 +8,35 @@
   "items": [
     {
       "kind": "youtube#channel",
-      "etag": "iacZFHYmCarMhR8Tnv8fm8iPnyg",
-      "id": "UCz9yS18zJGQObwUL_K-ICnw",
+      "etag": "Eqvn0YT8PPgiCJCq9AMnExZCHp4",
+      "id": "UC8qO5racajmy4YgPgNJkVXg",
       "snippet": {
-        "title": "KarolGVEVO",
-        "description": "",
-        "customUrl": "@karolgvevo",
-        "publishedAt": "2016-01-11T18:06:10Z",
+        "title": "Official fromis_9",
+        "description": " #fromis_9 #프로미스나인 Official YouTube ",
+        "customUrl": "@officialfromis9",
+        "publishedAt": "2017-11-16T07:22:58Z",
         "thumbnails": {
           "default": {
-            "url": "https://yt3.ggpht.com/Js_Ip-lezgP0XmjUzTLsHPUN9HVBn1vMeYnx12ApUPVfSPSIBiZ2OEAMlXM86USsGv38PsCnfQ=s88-c-k-c0x00ffffff-no-nd-rj",
+            "url": "https://yt3.ggpht.com/ZXbp1pbNLY9oM5hHGoU3xKJEjYIHvpzX6QAcab2Z4Dg8z1fjTvYg6w_rQQ5tc6i_c5OdQamsOZE=s88-c-k-c0x00ffffff-no-nd-rj",
             "width": 88,
             "height": 88
           },
           "medium": {
-            "url": "https://yt3.ggpht.com/Js_Ip-lezgP0XmjUzTLsHPUN9HVBn1vMeYnx12ApUPVfSPSIBiZ2OEAMlXM86USsGv38PsCnfQ=s240-c-k-c0x00ffffff-no-nd-rj",
+            "url": "https://yt3.ggpht.com/ZXbp1pbNLY9oM5hHGoU3xKJEjYIHvpzX6QAcab2Z4Dg8z1fjTvYg6w_rQQ5tc6i_c5OdQamsOZE=s240-c-k-c0x00ffffff-no-nd-rj",
             "width": 240,
             "height": 240
           },
           "high": {
-            "url": "https://yt3.ggpht.com/Js_Ip-lezgP0XmjUzTLsHPUN9HVBn1vMeYnx12ApUPVfSPSIBiZ2OEAMlXM86USsGv38PsCnfQ=s800-c-k-c0x00ffffff-no-nd-rj",
+            "url": "https://yt3.ggpht.com/ZXbp1pbNLY9oM5hHGoU3xKJEjYIHvpzX6QAcab2Z4Dg8z1fjTvYg6w_rQQ5tc6i_c5OdQamsOZE=s800-c-k-c0x00ffffff-no-nd-rj",
             "width": 800,
             "height": 800
           }
         },
-        "defaultLanguage": "en",
         "localized": {
-          "title": "KarolGVEVO",
-          "description": ""
+          "title": "Official fromis_9",
+          "description": " #fromis_9 #프로미스나인 Official YouTube "
         },
-        "country": "US"
+        "country": "KR"
       }
     }
   ]

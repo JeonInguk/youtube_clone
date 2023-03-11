@@ -44,11 +44,11 @@
 }
 
 .header_button {
-  cursor: pointer;
   border: 1px solid black;
   background-color: white;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 80px;
   border-left: none;
+  height: 45px;
 }

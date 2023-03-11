@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../conponent/layout/Header/Header";
 import Detail from "../conponent/pages/Detail/Detail";
@@ -6,14 +6,22 @@ import Home from "../conponent/pages/Home/Home";
 import Reserched from "../conponent/pages/Reserch/Reserched";
 
 export default function Router() {
+  const [videoId, setVideoId] = useState("");
+  const [typing, setTyping] = useState("");
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header typing={typing} setTyping={setTyping} />
         <Routes>
-          <Route path="/" element={<Detail />} />
-          <Route path="detail" element={<Detail />} />
-          <Route path="reserched" element={<Reserched />} />
+          <Route
+            path="/"
+            element={<Home videoId={videoId} setVideoId={setVideoId} />}
+          />
+          <Route
+            path="detail/:videoId"
+            element={<Detail videoId={videoId} setVideoId={setVideoId} />}
+          />
+          <Route path="reserched" element={<Reserched typing={typing} />} />
         </Routes>
       </BrowserRouter>
     </>

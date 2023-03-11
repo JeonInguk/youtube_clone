@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-export default function Home() {
+export default function Home({ videoId, setVideoId }) {
   const {
     isLoading,
     error,
@@ -12,7 +12,9 @@ export default function Home() {
     ["hotvideo"],
     async () => {
       console.log("fetching...");
-      return fetch(`data/hot_trend_video.json`).then((res) => res.json());
+      return fetch(
+        `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyDotPGd4xQfEiXvJi4HPoIaeKOowCxaCIE`
+      ).then((res) => res.json());
     },
     {
       staleTime: 1000 * 60 * 5,
@@ -27,7 +29,7 @@ export default function Home() {
       {hotVideo.items.map((video) => {
         return (
           <div className="homevideo_item">
-            <Link>
+            <Link to={`/detail/${video.id}`}>
               <img
                 className="hotvideoitem"
                 src={video.snippet.thumbnails.medium.url}
