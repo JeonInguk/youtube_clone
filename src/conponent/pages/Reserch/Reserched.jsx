@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { useQuery } from "react-query";
+import { useQuery, useQueryClient } from "react-query";
 import { Link } from "react-router-dom";
 import "./Reserched.css";
 import { getReserchedVideos } from "../../../youtubeAPI/YoutubeApi";
 
 export default function Reserched({ typing }) {
+  const queryClient = useQueryClient();
   const {
     isLoading,
     error,
