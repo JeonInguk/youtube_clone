@@ -2,24 +2,16 @@ import React from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { getHotTerendVideos } from "../../../youtubeAPI/YoutubeApi";
 
 export default function Home({ videoId, setVideoId }) {
   const {
     isLoading,
     error,
     data: hotVideo,
-  } = useQuery(
-    ["hotvideo"],
-    async () => {
-      console.log("fetching...");
-      return fetch(
-        `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyDotPGd4xQfEiXvJi4HPoIaeKOowCxaCIE`
-      ).then((res) => res.json());
-    },
-    {
-      staleTime: 1000 * 60 * 5,
-    }
-  );
+  } = useQuery(["hotvideo"], getHotTerendVideos, {
+    staleTime: 1000 * 60 * 5,
+  });
   if (isLoading) return <p>Loading...</p>;
 
   if (error) return <p>{error}</p>;

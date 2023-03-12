@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { QueryClient, useQueryClient } from "react-query";
 
 export default function Header({ typing, setTyping }) {
+  const queryClient = useQueryClient();
   const handleTyping = (e) => {
     setTyping(e.target.value);
   };
-  console.log(typing);
+  const handleMutation = () => {
+    queryClient.invalidateQueries(["reserchedvideo"]);
+  };
   return (
     <>
       <span className="header_container">
@@ -16,6 +20,7 @@ export default function Header({ typing, setTyping }) {
             src="img/youtube_logo.png"
             alt="유튜브로고"
             className="logo"
+            onClick={handleMutation}
           ></img>
         </Link>
         <form className="header_form">
