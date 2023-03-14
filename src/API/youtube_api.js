@@ -1,16 +1,19 @@
 import axios from "axios";
 
-const SERVER_URI = "http://localhost:4000";
+const youtubeKey = 'AIzaSyDotPGd4xQfEiXvJi4HPoIaeKOowCxaCIE';
 
-const getTodos = async () => {
-    const response = await axios.get(`${SERVER_URI}/todos`);
-    return response.data;
+const getHotTerendVideos = async () => {
+    const hotTrendVidoes = await axios.get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=24&key=${youtubeKey}`
+    );
+    return hotTrendVidoes.data;
 };
 
-const switchTodo = async (payload) => {
-    await axios.patch(`${SERVER_URI}/todos/${payload.id}`, {
-        isDone: payload.isDone,
-    });
+const getReserchedVideos = async (typing) => {
+    const reserchedString = typing;
+    const reserchedVideos = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${reserchedString}&key=${youtubeKey}`
+    );
+    return reserchedVideos.data;
 };
 
-export { getTodos, switchTodo };
+
+export { getHotTerendVideos, getReserchedVideos };

@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import { useMutation, useQuery, useQueryClient } from "react-query";
+import { getReserchedVideos } from "../../../youtubeAPI/YoutubeApi";
 
-export default function Header({ typing, setTyping }) {
+export default function Header({ typing, setTyping, setRefetching }) {
   const handleTyping = (e) => {
     setTyping(e.target.value);
   };
-  console.log(typing);
+  const handleRefetch = () => {
+    setRefetching(Math.random());
+  };
   return (
     <>
       <span className="header_container">
@@ -27,7 +31,7 @@ export default function Header({ typing, setTyping }) {
             onChange={handleTyping}
           ></input>
           <Link to={`/reserched`}>
-            <button className="header_button">
+            <button className="header_button" onClick={handleRefetch}>
               <HiMagnifyingGlass size="25" />
             </button>
           </Link>
