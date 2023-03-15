@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Reserched.css";
 import { getReserchedVideos } from "../../../youtubeAPI/YoutubeApi";
 
-export default function Reserched({ typing, refetching, setRefetching, army }) {
+export default function Reserched({ typing, refetching }) {
   const queryClient = useQueryClient();
   const {
     isLoading,
@@ -12,15 +12,10 @@ export default function Reserched({ typing, refetching, setRefetching, army }) {
     data: reserchedVideo,
     refetch,
   } = useQuery(["reserchedvideo"], () => getReserchedVideos(typing));
-  // console.log(typing);
-  // console.log(refetching);
-  console.log(army);
 
   useEffect(() => {
-    console.log(1);
-    queryClient.invalidateQueries(["reserchedvideo"]);
     refetch();
-  }, [army]);
+  }, [refetching]);
 
   if (isLoading) return <p>Loading...</p>;
 
