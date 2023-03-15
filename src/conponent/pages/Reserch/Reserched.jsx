@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
-import { QueryClient, useQuery, useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import "./Reserched.css";
 import { getReserchedVideos } from "../../../youtubeAPI/YoutubeApi";
 
 export default function Reserched({ typing, refetching }) {
-  const queryClient = useQueryClient();
   const {
     isLoading,
     error,
     data: reserchedVideo,
     refetch,
-  } = useQuery(["reserchedvideo"], () => getReserchedVideos(typing));
+  } = useQuery(["reserchedvideo"], () => getReserchedVideos(typing), {
+    staleTime: 1000 * 60 * 5,
+  });
 
   useEffect(() => {
     refetch();

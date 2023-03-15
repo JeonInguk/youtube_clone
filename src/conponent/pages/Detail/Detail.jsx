@@ -2,9 +2,17 @@ import React from "react";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import "./Detail.css";
+import { getRelatedVideos } from "../../../API/youtube_api";
 
 export default function Detail({ videoId, setVideoId }) {
   const param = useParams();
+  const {
+    isLoading,
+    error,
+    data: relatedVideo,
+  } = useQuery(["realtedvideo"], () => getRelatedVideos(param.videoId), {
+    staleTime: 1000 * 60 * 5,
+  });
   return (
     <div className="video_item_container">
       <div className="clickedvideo_item">
@@ -19,6 +27,26 @@ export default function Detail({ videoId, setVideoId }) {
           <h4 className="description">{video.snippet.description}</h4> */}
         </div>
       </div>
+      {relatedVideo &&
+        relatedVideo.items.map((videos) => {
+          return (
+            <div className="relatedVideos_container">
+              <div className="relatedVideo_container">
+                <img
+                  className="item"
+                  src={videos.snippet.thumbnails.medium.url}
+                  alt="썸네일"
+                ></img>
+                <div className="related_content">
+                  <h3 className="title">{videos.snippet.title}</h3>
+                  <h5 className="channeltitle">
+                    {videos.snippet.channelTitle}
+                  </h5>
+                </div>
+              </div>
+            </div>
+          );
+        })}
     </div>
   );
 }
