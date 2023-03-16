@@ -1,7 +1,9 @@
-.video_item_container {
+.videos_item_container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  padding-top: 80px;
+  margin-left: 300px;
+  flex-wrap: nowrap;
 }
 .clickedvideo_item {
   width: 900px;
@@ -24,12 +26,15 @@
   width: 400px;
 }
 .relatedVideos_container {
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
   width: 500px;
+  flex-wrap: nowrap;
 }
 
 .relatedVideo_container {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
 }

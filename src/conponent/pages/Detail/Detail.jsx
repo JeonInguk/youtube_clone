@@ -14,7 +14,7 @@ export default function Detail({ videoId, setVideoId }) {
     staleTime: 1000 * 60 * 5,
   });
   return (
-    <div className="video_item_container">
+    <div className="videos_item_container">
       <div className="clickedvideo_item">
         <iframe
           className="videoframe"
@@ -27,10 +27,10 @@ export default function Detail({ videoId, setVideoId }) {
           <h4 className="description">{video.snippet.description}</h4> */}
         </div>
       </div>
-      {relatedVideo &&
-        relatedVideo.items.map((videos) => {
-          return (
-            <div className="relatedVideos_container">
+      <div className="relatedVideos_container">
+        {relatedVideo &&
+          relatedVideo.items.map((videos) => {
+            return (
               <div className="relatedVideo_container">
                 <img
                   className="item"
@@ -44,9 +44,9 @@ export default function Detail({ videoId, setVideoId }) {
                   </h5>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+      </div>
     </div>
   );
 }
