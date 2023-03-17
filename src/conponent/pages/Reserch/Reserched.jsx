@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Reserched.css";
 import { getReserchedVideos } from "../../../youtubeAPI/YoutubeApi";
 
-export default function Reserched({ typing, refetching }) {
+export default function Reserched({ typing, refetching, setTyping }) {
   const {
     isLoading,
     error,
@@ -13,9 +13,9 @@ export default function Reserched({ typing, refetching }) {
   } = useQuery(["reserchedvideo"], () => getReserchedVideos(typing), {
     staleTime: 1000 * 60 * 5,
   });
-
   useEffect(() => {
     refetch();
+    setTyping("");
   }, [refetching]);
 
   if (isLoading) return <p>Loading...</p>;

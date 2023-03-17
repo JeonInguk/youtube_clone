@@ -31,6 +31,7 @@ export default function Router() {
             element={
               <Reserched
                 typing={typing}
+                setTyping={setTyping}
                 refetching={refetching}
                 setRefetching={setRefetching}
               />
